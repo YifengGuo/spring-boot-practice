@@ -43,7 +43,9 @@ public class ProxyBean implements InvocationHandler {
          * interfaces of target which need proxy to be bonded
          * InvocationHandler: to implement proxy logic
          */
-        Object proxy = Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), proxyBean);
+        Object proxy = Proxy.newProxyInstance(target.getClass().getClassLoader(),
+                target.getClass().getInterfaces(),  // return an array of interfaces so that different interfaces (targets) can be cast each other during Introduction
+                proxyBean);
 
         return proxy;
     }
