@@ -1,4 +1,4 @@
-package com.yifeng.spring_boot_practice.chapter4AOP.aop;
+package com.yifeng.spring_boot_practice.chapter4_AOP.aop;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

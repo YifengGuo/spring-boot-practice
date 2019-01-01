@@ -1,4 +1,4 @@
-package com.yifeng.spring_boot_practice.chapter4AOP.interceptor;
+package com.yifeng.spring_boot_practice.chapter4_AOP.interceptor;
 
 import java.lang.reflect.InvocationTargetException;
 
