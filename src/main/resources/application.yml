@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_boot_chapter5
+    username: root
+    password: fflovexx123
+    # driver-class-name: com.mysql.jdbc.Driver
+
+    # db conn pool type does not need to configure any more
+    # HikariDataSource by default
+    # type:
+    dbcp2:
+      # max idle connections, 0 means no limit for idle connection number
+      max-idle: 10
+      # max active connections
+      max-total: 50
+      # max wait time
+      max-wait-millis: 10000
+      # connection pool initial connections
+      initial-size: 5
+    # driver-class-name: com.mysql.jdbc.Driver
