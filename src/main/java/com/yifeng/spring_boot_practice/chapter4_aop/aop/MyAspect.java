@@ -1,4 +1,4 @@
-package com.yifeng.spring_boot_practice.chapter4_AOP.aop;
+package com.yifeng.spring_boot_practice.chapter4_aop.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -17,11 +17,11 @@ public class MyAspect {
     /**
      * UserServiceImpl will be enhanced by UserValidatorImpl.class
      */
-    @DeclareParents(value = "com.yifeng.spring_boot_practice.chapter4_AOP.aop.UserServiceImpl",
+    @DeclareParents(value = "com.yifeng.spring_boot_practice.chapter4_aop.aop.UserServiceImpl",
             defaultImpl = UserValidatorImpl.class)
     public UserValidator userValidator;
 
-    @Pointcut("execution(* com.yifeng.spring_boot_practice.chapter4_AOP.aop.UserServiceImpl.printUser(..))")
+    @Pointcut("execution(* com.yifeng.spring_boot_practice.chapter4_aop.aop.UserServiceImpl.printUser(..))")
     public void pointCut(){
 
     }

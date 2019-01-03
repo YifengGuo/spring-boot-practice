@@ -1,4 +1,4 @@
-package com.yifeng.spring_boot_practice.chapter4_AOP.aop;
+package com.yifeng.spring_boot_practice.chapter4_aop.aop;
 
 import org.springframework.stereotype.Service;
 

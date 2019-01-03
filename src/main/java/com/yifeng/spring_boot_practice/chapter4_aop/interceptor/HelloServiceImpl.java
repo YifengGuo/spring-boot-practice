@@ -1,4 +1,4 @@
-package com.yifeng.spring_boot_practice.chapter4_AOP.interceptor;
+package com.yifeng.spring_boot_practice.chapter4_aop.interceptor;
 
 import org.springframework.util.StringUtils;
 

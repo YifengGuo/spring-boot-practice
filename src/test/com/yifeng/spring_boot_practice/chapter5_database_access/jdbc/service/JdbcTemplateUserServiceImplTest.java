@@ -32,10 +32,10 @@ public class JdbcTemplateUserServiceImplTest {
         user1.setNote("test1");
 
         User user2 = new User();
-        user1.setId(2L);
-        user1.setUsername("Judy");
-        user1.setSex(SexEnum.FEMALE);
-        user1.setNote("test2");
+        user2.setId(2L);
+        user2.setUsername("Judy");
+        user2.setSex(SexEnum.FEMALE);
+        user2.setNote("test2");
 
         System.out.println(service.insertUser(user1));
         System.out.println(service.insertUser(user2));
@@ -72,11 +72,11 @@ public class JdbcTemplateUserServiceImplTest {
         System.out.println(service.updateUser(newUsesr));
     }
 
-    @Test
-    public void testF_deleteUser() {
-        Long id1 = 1L;
-        Long id2 = 2L;
-        System.out.println(service.deleteUser(id1));
-        System.out.println(service.deleteUser(id2));
-    }
+//    @Test
+//    public void testF_deleteUser() {
+//        Long id1 = 1L;
+//        Long id2 = 2L;
+//        System.out.println(service.deleteUser(id1));
+//        System.out.println(service.deleteUser(id2));
+//    }
 }
