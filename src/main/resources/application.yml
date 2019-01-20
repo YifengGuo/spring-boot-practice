@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_boot_chapter5
+    url: jdbc:mysql://localhost:3306/spring_boot_practice
     username: root
-    password: fflovexx123
+    password: root
     # driver-class-name: com.mysql.jdbc.Driver
 
     # db conn pool type does not need to configure any more
@@ -27,3 +27,11 @@ spring:
     hibernate:
       # Hibernate DDL (definition language) strategy as update
       ddl-auto: update
+
+mybatis:
+  # mapper files wildcard
+  mapper-locations: classpath:/mapper/*.xml
+  # package scan for aliases, used with @Alias
+  type-aliases-package: com.yifeng.spring_boot_practice.chapter5_database_access.mybatis.pojo
+  # package scan for type handlers
+  type-handlers-package: com.yifeng.spring_boot_practice.chapter5_database_access.mybatis.typehandler
