@@ -35,3 +35,5 @@ mybatis:
   type-aliases-package: com.yifeng.spring_boot_practice.chapter5_database_access.mybatis.pojo
   # package scan for type handlers
   type-handlers-package: com.yifeng.spring_boot_practice.chapter5_database_access.mybatis.typehandler
+  # mybatis plugin path
+  config-location: classpath:/mybatis/mybatis-config.xml
