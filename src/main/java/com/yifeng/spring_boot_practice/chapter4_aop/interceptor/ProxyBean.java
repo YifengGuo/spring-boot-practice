@@ -58,6 +58,7 @@ public class ProxyBean implements InvocationHandler {
      * @return the result of method
      * @throws Throwable
      */
+    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         boolean exceptionFlag = false;
 
