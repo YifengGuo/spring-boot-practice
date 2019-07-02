@@ -3,12 +3,12 @@ package com.yifeng.spring_boot_practice.chapter4_aop.proxy_basics;
 /**
  * Created by guoyifeng on 6/13/19
  */
-interface Interface {
+interface TestInterface {
     void doSomething();
     void somethingElse(String arg);
 }
 
-class RealObject implements Interface {
+class RealObject implements TestInterface {
     @Override
     public void doSomething() {
         System.out.println("doSomething");
@@ -20,11 +20,11 @@ class RealObject implements Interface {
     }
 }
 
-class SimpleProxy implements Interface {
+class SimpleProxy implements TestInterface {
 
-    private Interface proxied;  // target to be proxied
+    private TestInterface proxied;  // target to be proxied
 
-    public SimpleProxy(Interface proxied) {
+    public SimpleProxy(TestInterface proxied) {
         this.proxied = proxied;
     }
 
@@ -42,7 +42,7 @@ class SimpleProxy implements Interface {
 }
 
 public class SimpleProxyDemo {
-    public static void consumer(Interface i) {
+    public static void consumer(TestInterface i) {
         i.doSomething();
         i.somethingElse("barfoo");
     }

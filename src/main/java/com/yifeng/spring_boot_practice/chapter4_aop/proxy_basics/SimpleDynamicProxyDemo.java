@@ -29,7 +29,7 @@ class DynamicProxyHandler implements InvocationHandler {
 
 
 public class SimpleDynamicProxyDemo {
-    public static void consumer(Interface i) {
+    public static void consumer(TestInterface i) {
         i.doSomething();
         i.somethingElse("boofar");
     }
@@ -40,9 +40,9 @@ public class SimpleDynamicProxyDemo {
         consumer(real);
         System.out.println();
         // create a proxy upon RealObject
-        Interface proxy = (Interface) Proxy.newProxyInstance(
-                Interface.class.getClassLoader(),
-                new Class[]{Interface.class},
+        TestInterface proxy = (TestInterface) Proxy.newProxyInstance(
+                TestInterface.class.getClassLoader(),
+                new Class[]{TestInterface.class},
                 new DynamicProxyHandler(real)
         );
         consumer(proxy);
