@@ -33,9 +33,9 @@ public class RedisConfig {
 
         // fetch standalone redis configuration
         RedisStandaloneConfiguration redisStandaloneConfiguration = jedisConnectionFactory.getStandaloneConfiguration();
-        redisStandaloneConfiguration.setHostName("127.0.0.1");
+        redisStandaloneConfiguration.setHostName("172.16.150.182");
         redisStandaloneConfiguration.setPort(6379);
-//        redisStandaloneConfiguration.setPassword("root");
+        redisStandaloneConfiguration.setPassword("cloud@hansight.com");
 
         this.redisConnectionFactory = jedisConnectionFactory;
         return redisConnectionFactory;
@@ -50,6 +50,7 @@ public class RedisConfig {
         redisTemplate.setKeySerializer(stringRedisSerializer);
         redisTemplate.setHashKeySerializer(stringRedisSerializer);
         redisTemplate.setHashValueSerializer(stringRedisSerializer);
+        redisTemplate.setValueSerializer(redisTemplate.getValueSerializer());
 
         redisTemplate.setConnectionFactory(initRedisConnectionFactory());
         return redisTemplate;

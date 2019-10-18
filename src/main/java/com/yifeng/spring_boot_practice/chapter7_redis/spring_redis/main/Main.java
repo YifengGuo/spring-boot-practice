@@ -24,11 +24,13 @@ public class Main {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(RedisConfig.class);
         RedisTemplate<Object, Object> redisTemplate = ctx.getBean(RedisTemplate.class);
 
-        naiveInsertData(redisTemplate);
+//        naiveInsertData(redisTemplate);
+//
+//        insertDataWithRedisCallback(redisTemplate);
+//
+//        insertDataWithSessionCallback(redisTemplate);
 
-        insertDataWithRedisCallback(redisTemplate);
-
-        insertDataWithSessionCallback(redisTemplate);
+        getdata(redisTemplate);
     }
 
     /**
@@ -41,6 +43,11 @@ public class Main {
         // > keys *key1 to get the value
         redisTemplate.opsForValue().set("key1", "value1");
         redisTemplate.opsForHash().put("hash", "hkey", "hvalue");
+    }
+
+    private static void getdata(RedisTemplate redisTemplate) {
+        int a = (int)redisTemplate.opsForValue().get("AWfKwlwhwcPslrGk8l4__File Access");
+        System.out.println(a);
     }
 
     /**
