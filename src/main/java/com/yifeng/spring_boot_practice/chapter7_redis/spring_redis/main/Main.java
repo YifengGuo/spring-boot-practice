@@ -46,7 +46,7 @@ public class Main {
     }
 
     private static void getdata(RedisTemplate redisTemplate) {
-        int a = (int)redisTemplate.opsForValue().get("AWfKwlwhwcPslrGk8l4__File Access");
+        long a = (long)redisTemplate.opsForValue().get("AWfKwlwhwcPslrGk8l4__File Access");
         System.out.println(a);
     }
 

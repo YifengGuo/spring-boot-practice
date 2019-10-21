@@ -33,7 +33,7 @@ public class RedisConfig {
 
         // fetch standalone redis configuration
         RedisStandaloneConfiguration redisStandaloneConfiguration = jedisConnectionFactory.getStandaloneConfiguration();
-        redisStandaloneConfiguration.setHostName("172.16.150.182");
+        redisStandaloneConfiguration.setHostName("172.16.150.184");
         redisStandaloneConfiguration.setPort(6379);
         redisStandaloneConfiguration.setPassword("cloud@hansight.com");
 
